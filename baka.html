@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{
+
+    margin: 0;
+     padding: 0;
+     font-family: Verdana, Geneva, sans-serif;
+}
+  .container{
+      width: 45%;
+      height: 50%;
+      text-align: center;
+      justify-content: space-between;
+  }
+  input{
+    padding: 10px 40px;
+      border-radius: 50px;
+    cursor: pointer;
+    border: 0px;
+    text-transform: uppercase;
+      font-size: 20px;
+      background-color: #d0d0f9;
+      line-height: 1;
+      color: black;
+    }
+
+input:hover{
+    cursor: pointer;
+    colour: blue ;
+    box-shadow: #0e0805;
+    box-shadow: #0f0b09 0px 8px 40px 0px;
+      transform: translateY(1px);
+}
+  
+  button{
+     padding: 17px 20px;
+     border-radius: 50px;
+     cursor: pointer;
+     border: 0px;
+     background-colour: White;
+     letter-spacing: 2.01px;
+     text-transform: uppercase;
+     font-size:20px;
+  }
+  button:hover{
+
+      letter-spacing: 3px;
+      background-color: #dc5d19;
+      colour: white;
+      box-shadow: #090807 0px 8px 40px 0px;
+      transform: translateY(1px);
+
+
+
+  }
+
+</style>
+  <title>temperature</title>
+</head>
+<body>
+
+    <div class="container">
+    <center><h1>Temperature Converter :</h1>
+
+    </div>
+     <input type="number" id="fahrenheit" placeholder="Fahrenheit:" name="f" value="" />
+      <input type="number" id="celsius" placeholder="Celsius:" name="c" value="" />
+     <button id="convert">Convert</button>
+     <button id="clear">Reset</button>
+    </center>
+<script>
+document.getElementById('convert').onclick=tempConvert;
+document.getElementById('clear').onclick=clearForm;
+
+function tempconvert(){
+var fahrenheit=document.getElementById('fahrenheit').value;
+var celsius=document.getElementById('celsius').value;
+}
+if(fahrenheit !='')
+{
+    celsius=(parseFloat(fahrenheit)-32)/1.8;
+} else{
+    fahrenheit=(parseFloat(celsius)*1.8)+32;
+}
+document.getElementById('fahrenheit').value=parseFloat(fahrenheit).toFixed(1);
+document.getElementById('celsius').value=parseFloat(celsius).toFixed(1);
+ functionclearform();
+document.getElementById('fahrenheit').value='';
+  document.getElementById('celsius').value='';
+</script>
+</body>
+</html>
